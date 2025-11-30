@@ -154,6 +154,67 @@ export const App: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            {/* Understanding Section */}
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold text-orange-800 mb-6">📚 ¿Qué es la Mala Alimentación?</h3>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-bold text-orange-700 mb-2">📖 Definición</h4>
+                <p className="text-gray-700">La mala alimentación es el consumo habitual de alimentos pobres en nutrientes esenciales y altos en calorías, grasas saturadas, azúcares y sodio. Es un hábito que afecta negativamente la salud física y mental.</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="text-lg font-bold text-orange-700 mb-3">🔴 Causas Principales</h4>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>✗ Falta de tiempo para cocinar</li>
+                    <li>✗ Dependencia de comida rápida</li>
+                    <li>✗ Desconocimiento nutricional</li>
+                    <li>✗ Estrés y hábitos emocionales</li>
+                    <li>✗ Marketing de alimentos ultraprocesados</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="text-lg font-bold text-red-700 mb-3">⚠️ Consecuencias para la Salud</h4>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>❌ Obesidad y sobrepeso</li>
+                    <li>❌ Diabetes tipo 2</li>
+                    <li>❌ Enfermedades cardiovasculares</li>
+                    <li>❌ Deficiencias nutricionales</li>
+                    <li>❌ Problemas digestivos y fatiga crónica</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 rounded">
+                <h4 className="text-lg font-bold text-green-700 mb-3">💚 Cómo Nuestros Productos Te Ayudan</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div className="flex gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-semibold text-gray-800">Nutrición Completa</p>
+                      <p className="text-gray-600">Productos ricos en vitaminas, minerales y proteínas esenciales</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-2xl">⚡</span>
+                    <div>
+                      <p className="font-semibold text-gray-800">Energía Natural</p>
+                      <p className="text-gray-600">Sin aditivos ni químicos, energía sostenida todo el día</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-2xl">🎯</span>
+                    <div>
+                      <p className="font-semibold text-gray-800">Control de Peso</p>
+                      <p className="text-gray-600">Alimentos saciantes que ayudan a controlar el apetito</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Problema Section */}
             <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold text-red-800 mb-4">⚠️ Problema: Mala Alimentación</h3>
@@ -431,6 +492,95 @@ export const App: React.FC = () => {
             <div className="bg-white rounded-lg p-6 shadow">
               <p className="font-bold text-gray-800 mb-2">¿Necesito ejercitarme también?</p>
               <p className="text-gray-600 text-sm">La dieta es el 80%. 30 minutos de ejercicio diario potencia los resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">📧 Contáctanos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Contact Info */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">📞</span>
+                  <div>
+                    <p className="font-semibold text-gray-800">Teléfono</p>
+                    <p className="text-gray-600">+51 987 654 321</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">📧</span>
+                  <div>
+                    <p className="font-semibold text-gray-800">Email</p>
+                    <p className="text-gray-600">info@saludencadabocado.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">📍</span>
+                  <div>
+                    <p className="font-semibold text-gray-800">Ubicación</p>
+                    <p className="text-gray-600">Lima, Perú</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🕐</span>
+                  <div>
+                    <p className="font-semibold text-gray-800">Horario</p>
+                    <p className="text-gray-600">Lun - Vie: 9:00 AM - 6:00 PM</p>
+                    <p className="text-gray-600">Sab - Dom: 10:00 AM - 4:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">Enviar Comentario</h3>
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-2">Nombre</label>
+                  <input 
+                    type="text" 
+                    placeholder="Tu nombre" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-2">Email</label>
+                  <input 
+                    type="email" 
+                    placeholder="tu@email.com" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-2">Asunto</label>
+                  <input 
+                    type="text" 
+                    placeholder="Asunto del mensaje" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-2">Mensaje</label>
+                  <textarea 
+                    placeholder="Escribe tu comentario aquí..." 
+                    rows={4}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 resize-none"
+                  ></textarea>
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:opacity-90 transition"
+                >
+                  Enviar Comentario
+                </button>
+              </form>
             </div>
           </div>
         </div>
