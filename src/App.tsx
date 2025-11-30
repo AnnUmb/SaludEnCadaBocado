@@ -141,7 +141,7 @@ export const App: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl p-12 mb-12 text-center animate-fadeIn">
-          <div className="bg-black rounded-2xl p-4 w-40 h-40 mx-auto mb-6 flex items-center justify-center">
+          <div className="bg-black bg-opacity-10 rounded-2xl p-4 w-40 h-40 mx-auto mb-6 flex items-center justify-center">
             <img src="/SaludEnCadaBocado/Logo.png" alt="Salud en Cada Bocado Logo" className="w-32 h-32" />
           </div>
           <h2 className="text-4xl font-bold mb-4">¡Transforma tu Alimentación Hoy!</h2>
