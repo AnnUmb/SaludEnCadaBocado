@@ -15,16 +15,25 @@ const products: Product[] = [
     id: 1,
     name: 'Ensalada Verde Orgánica',
     description: 'Mezcla fresca de vegetales verdes premium',
-    price: 12.99,
+    price: 9.99,
     image: '🥗',
     benefits: ['Alto en fibra', 'Bajo en calorías', 'Rich en antioxidantes'],
+    category: 'Vegetales'
+  },
+  {
+    id: 2,
+    name: 'Espinaca Fresca Orgánica',
+    description: 'Espinaca cruda, rica en hierro y nutrientes',
+    price: 8.99,
+    image: '🥬',
+    benefits: ['Alto en hierro', 'Vitamina K', 'Baja en calorías'],
     category: 'Vegetales'
   },
   {
     id: 3,
     name: 'Frutas Secas Variadas',
     description: 'Mix de almendras, nueces y pasas',
-    price: 18.99,
+    price: 14.99,
     image: '🌰',
     benefits: ['Energía natural', 'Omega-3', 'Snack saludable'],
     category: 'Snacks'
@@ -33,7 +42,7 @@ const products: Product[] = [
     id: 4,
     name: 'Té Verde Antioxidante',
     description: 'Té verde premium de Japón',
-    price: 9.99,
+    price: 7.99,
     image: '🍵',
     benefits: ['Antioxidantes', 'Acelera metabolismo', 'Sin cafeína excesiva'],
     category: 'Bebidas'
@@ -42,7 +51,7 @@ const products: Product[] = [
     id: 5,
     name: 'Yogur Griego Sin Azúcar',
     description: 'Yogur natural rico en probióticos',
-    price: 7.99,
+    price: 5.99,
     image: '🥛',
     benefits: ['Probióticos', 'Alto en proteína', 'Digestión saludable'],
     category: 'Lácteos'
@@ -51,7 +60,7 @@ const products: Product[] = [
     id: 6,
     name: 'Granola Casera',
     description: 'Mezcla de avena, miel y frutos secos',
-    price: 13.99,
+    price: 10.99,
     image: '🍎',
     benefits: ['Fibra completa', 'Energía duradera', 'Desayuno perfecto'],
     category: 'Cereales'
@@ -488,6 +497,69 @@ export const App: React.FC = () => {
         </div>
       </div>
 
+      {/* Videos Section */}
+      <div className="bg-gray-900 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">🎥 Contenido Educativo</h2>
+          <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+            Aprende más sobre nutrición, hábitos saludables y cómo transformar tu vida con nuestros videos recomendados
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Video 1 */}
+            <div className="rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="300"
+                src="https://www.youtube.com/embed/3195lNEns54"
+                title="Video Educativo 1"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Video 2 */}
+            <div className="rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="300"
+                src="https://www.youtube.com/embed/07_AFD8y5jA"
+                title="Video Educativo 2"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Video 3 */}
+            <div className="rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="300"
+                src="https://www.youtube.com/embed/YsKHp1SfZ-Q"
+                title="Video Educativo 3"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Video 4 */}
+            <div className="rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="300"
+                src="https://www.youtube.com/embed/yx5oTiQxujg"
+                title="Video Educativo 4"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Contact Section */}
       <div className="bg-gradient-to-r from-blue-50 to-purple-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -573,85 +645,6 @@ export const App: React.FC = () => {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Videos Section */}
-      <div className="bg-gray-900 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">🎥 Contenido Educativo</h2>
-          <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-            Aprende más sobre nutrición, hábitos saludables y cómo transformar tu vida con nuestros videos recomendados
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Video 1 */}
-            <a 
-              href="https://youtu.be/3195lNEns54?si=uhjnl1VRZllUB6sS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105"
-            >
-              <div className="bg-gradient-to-br from-purple-600 to-pink-600 h-48 flex items-center justify-center relative">
-                <span className="text-6xl">▶️</span>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition"></div>
-              </div>
-              <div className="bg-gray-800 p-4">
-                <p className="text-white font-semibold">Video Educativo 1</p>
-                <p className="text-gray-400 text-sm">Haz clic para ver en YouTube</p>
-              </div>
-            </a>
-
-            {/* Video 2 */}
-            <a 
-              href="https://youtu.be/07_AFD8y5jA?si=qHwIt_9rXGI0f-Tp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105"
-            >
-              <div className="bg-gradient-to-br from-blue-600 to-cyan-600 h-48 flex items-center justify-center relative">
-                <span className="text-6xl">▶️</span>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition"></div>
-              </div>
-              <div className="bg-gray-800 p-4">
-                <p className="text-white font-semibold">Video Educativo 2</p>
-                <p className="text-gray-400 text-sm">Haz clic para ver en YouTube</p>
-              </div>
-            </a>
-
-            {/* Video 3 */}
-            <a 
-              href="https://youtu.be/YsKHp1SfZ-Q?si=1vpQ9RDcobL7CY3S"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105"
-            >
-              <div className="bg-gradient-to-br from-green-600 to-emerald-600 h-48 flex items-center justify-center relative">
-                <span className="text-6xl">▶️</span>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition"></div>
-              </div>
-              <div className="bg-gray-800 p-4">
-                <p className="text-white font-semibold">Video Educativo 3</p>
-                <p className="text-gray-400 text-sm">Haz clic para ver en YouTube</p>
-              </div>
-            </a>
-
-            {/* Video 4 */}
-            <a 
-              href="https://youtu.be/yx5oTiQxujg?si=ijANPyJ-HEzoS-1-"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105"
-            >
-              <div className="bg-gradient-to-br from-orange-600 to-red-600 h-48 flex items-center justify-center relative">
-                <span className="text-6xl">▶️</span>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition"></div>
-              </div>
-              <div className="bg-gray-800 p-4">
-                <p className="text-white font-semibold">Video Educativo 4</p>
-                <p className="text-gray-400 text-sm">Haz clic para ver en YouTube</p>
-              </div>
-            </a>
           </div>
         </div>
       </div>
