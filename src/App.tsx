@@ -153,6 +153,29 @@ export const App: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            {/* Problema Section */}
+            <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold text-red-800 mb-4">⚠️ Problema: Mala Alimentación</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded">
+                  <p className="text-red-700 font-semibold mb-2">🍔 Comida Rápida</p>
+                  <p className="text-sm text-gray-600">Alta en grasas saturadas y sodio, baja en nutrientes</p>
+                </div>
+                <div className="bg-white p-4 rounded">
+                  <p className="text-red-700 font-semibold mb-2">🍬 Azúcares Refinados</p>
+                  <p className="text-sm text-gray-600">Generan picos de insulina y adicción</p>
+                </div>
+                <div className="bg-white p-4 rounded">
+                  <p className="text-red-700 font-semibold mb-2">🥤 Bebidas Azucaradas</p>
+                  <p className="text-sm text-gray-600">Contribuyen a obesidad y diabetes tipo 2</p>
+                </div>
+                <div className="bg-white p-4 rounded">
+                  <p className="text-red-700 font-semibold mb-2">🍕 Alimentos Ultraprocesados</p>
+                  <p className="text-sm text-gray-600">Llenos de aditivos y conservantes dañinos</p>
+                </div>
+              </div>
+            </div>
+
             {/* Info Section */}
             <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">¿Por qué cambiar tu alimentación?</h3>
@@ -227,7 +250,7 @@ export const App: React.FC = () => {
                         ))}
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-2xl font-bold text-purple-600">${product.price}</span>
+                        <span className="text-2xl font-bold text-purple-600">S/. {product.price}</span>
                         <button
                           onClick={() => addToCart(product)}
                           className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
@@ -289,19 +312,125 @@ export const App: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="border-t pt-4">
-                      <div className="flex justify-between mb-4">
-                        <span className="font-bold text-gray-800">Total:</span>
-                        <span className="text-2xl font-bold text-purple-600">${totalPrice.toFixed(2)}</span>
+                      <div className="border-t pt-4">
+                        <div className="flex justify-between mb-4">
+                          <span className="font-bold text-gray-800">Total:</span>
+                          <span className="text-2xl font-bold text-purple-600">S/. {totalPrice.toFixed(2)}</span>
+                        </div>
+                        <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:opacity-90 transition">
+                          Proceder al Pago
+                        </button>
                       </div>
-                      <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-bold hover:opacity-90 transition">
-                        Proceder al Pago
-                      </button>
-                    </div>
                   </>
                 )}
               </div>
             )}
+          </div>
+        </div>
+      </div>
+
+      {/* Nutrición Info Section */}
+      <div className="bg-gradient-to-r from-green-50 to-blue-50 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">📊 Guía de Nutrición Saludable</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="text-5xl mb-4">🥗</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Vegetales y Frutas</h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>✓ 5 porciones diarias recomendadas</li>
+                <li>✓ Ricas en vitaminas y minerales</li>
+                <li>✓ Bajas en calorías</li>
+                <li>✓ Fibra natural para digestión</li>
+                <li>✓ Previenen enfermedades crónicas</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="text-5xl mb-4">💪</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Proteínas Saludables</h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>✓ Construyen y reparan músculos</li>
+                <li>✓ Pescado, pollo, huevos, legumbres</li>
+                <li>✓ 25-30g por comida</li>
+                <li>✓ Aumentan saciedad</li>
+                <li>✓ Aceleran metabolismo</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="text-5xl mb-4">🌾</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Granos Integrales</h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>✓ Arroz integral, avena, trigo</li>
+                <li>✓ Controlan niveles de azúcar</li>
+                <li>✓ Energía duradera</li>
+                <li>✓ Mejor digestión</li>
+                <li>✓ Mayor sensación de saciedad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonios Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">💬 Historias de Éxito</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <span className="text-4xl mr-3">👩‍💼</span>
+                <div>
+                  <p className="font-bold text-gray-800">María</p>
+                  <p className="text-sm text-gray-600">Perdió 15 kg en 3 meses</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm italic">"Cambié mi alimentación y mi energía aumentó notablemente. ¡No vuelvo atrás!"</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-lg p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <span className="text-4xl mr-3">👨‍💻</span>
+                <div>
+                  <p className="font-bold text-gray-800">Carlos</p>
+                  <p className="text-sm text-gray-600">Redujo estrés y mejoró dormir</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm italic">"Mejor concentración en el trabajo y duermo profundamente. Recomiendo a todos."</p>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-lg p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <span className="text-4xl mr-3">👩‍🏫</span>
+                <div>
+                  <p className="font-bold text-gray-800">Laura</p>
+                  <p className="text-sm text-gray-600">Controlou su diabetes</p>
+                </div>
+              </div>
+              <p className="text-gray-700 text-sm italic">"Mis niveles de glucosa están normales. ¡La alimentación lo cambió todo!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">❓ Preguntas Frecuentes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg p-6 shadow">
+              <p className="font-bold text-gray-800 mb-2">¿Cuánto tiempo tarda ver resultados?</p>
+              <p className="text-gray-600 text-sm">Generalmente, en 2-4 semanas notarás más energía. Los cambios físicos suelen verse en 4-8 semanas.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow">
+              <p className="font-bold text-gray-800 mb-2">¿Es caro comer saludable?</p>
+              <p className="text-gray-600 text-sm">No. Comprar productos locales y de temporada es más económico que comida procesada.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow">
+              <p className="font-bold text-gray-800 mb-2">¿Puedo comer mis comidas favoritas?</p>
+              <p className="text-gray-600 text-sm">Sí, con moderación. El equilibrio es clave. No se trata de privarse, sino de elegir mejor.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow">
+              <p className="font-bold text-gray-800 mb-2">¿Necesito ejercitarme también?</p>
+              <p className="text-gray-600 text-sm">La dieta es el 80%. 30 minutos de ejercicio diario potencia los resultados.</p>
+            </div>
           </div>
         </div>
       </div>
