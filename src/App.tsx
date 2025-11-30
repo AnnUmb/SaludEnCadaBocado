@@ -21,15 +21,6 @@ const products: Product[] = [
     category: 'Vegetales'
   },
   {
-    id: 2,
-    name: 'Proteína en Polvo Natural',
-    description: 'Proteína de suero de leche sin aditivos',
-    price: 34.99,
-    image: '💪',
-    benefits: ['100% natural', 'Sin azúcar', 'Fácil digestión'],
-    category: 'Suplementos'
-  },
-  {
     id: 3,
     name: 'Frutas Secas Variadas',
     description: 'Mix de almendras, nueces y pasas',
